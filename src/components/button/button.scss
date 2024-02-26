@@ -1,0 +1,44 @@
+@import "../../styles/responsive.scss";
+@import "../../styles/variables.scss";
+
+.button {
+  width: 80px;
+  height: 40px;
+  border: 1px solid $soft-bg;
+  border-radius: 10px;
+  font-weight: 300;
+  color: #ffffff;
+
+  transition: all 300ms ease-in-out;
+  scale: 1;
+
+  &:hover {
+    color: #ffffff;
+    background: $soft-bg;
+  }
+
+  &:active {
+    scale: 0.9;
+  }
+}
+
+.exitBtn {
+  width: 60px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 300;
+  color: $dark-color;
+  transition: all 300ms ease-in-out;
+  scale: 1;
+
+  &:hover {
+    color: #ffffff;
+    background: $soft-bg;
+    scale: 1.1;
+  }
+
+  &:active {
+    scale: 0.9;
+  }
+}

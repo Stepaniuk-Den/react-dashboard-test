@@ -1,0 +1,140 @@
+@import "../../styles/variables.scss";
+
+.modalSettings {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #000000cc;
+  z-index: 5;
+
+  .wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400px;
+    padding: 40px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #000000;
+
+    .closeModal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      border-radius: 10px;
+
+      transition: all 300ms ease-in-out;
+      scale: 1;
+
+      &:hover {
+        scale: 1.2;
+        color: #ffffff;
+        background: $main-bg;
+      }
+    }
+
+    .form {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+
+      h3 {
+        font-size: 36px;
+        margin-bottom: 60px;
+      }
+
+      p {
+        align-self: start;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .passwords {
+        font-size: 14px;
+      }
+
+      .save {
+        width: 100px;
+        height: 40px;
+        padding: 10px;
+        border-radius: 10px;
+        background: none;
+        border: 1px solid $main-bg;
+        color: #000000;
+        transition: all 300ms ease-in-out;
+        scale: 1;
+
+        &:hover {
+          width: 300px;
+          color: #ffffff;
+          background: $main-bg;
+        }
+
+        &:active {
+          scale: 0.9;
+        }
+      }
+
+      .wrapperInput {
+        position: relative;
+        margin-bottom: 30px;
+
+        input {
+          width: 300px;
+          height: 40px;
+          padding: 10px;
+          border: 1px solid $main-bg;
+          border-radius: 10px;
+
+          &::placeholder {
+            font-size: 14px;
+            font-weight: 200;
+          }
+        }
+
+        .toggle {
+          position: absolute;
+          right: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          svg {
+            width: 18px;
+            height: 18px;
+          }
+        }
+
+        .errorMessage {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%;
+          display: block;
+          line-height: 14px;
+          font-size: 12px;
+          color: #ff0000;
+        }
+      }
+    }
+  }
+}

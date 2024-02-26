@@ -1,0 +1,98 @@
+@import "./variables.scss";
+@import "./responsive.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+button,
+Link,
+input {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus,
+button:focus {
+  outline: 1px solid transparent;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+address {
+  font-style: normal;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+.main {
+  font-family: "Inter", sans-serif;
+  background-color: $main-bg;
+  color: $main-color;
+}
+
+.container {
+  display: flex;
+
+  @include xxl {
+  }
+  @include xl {
+  }
+  @include lg {
+  }
+  @include md {
+  }
+  @include sm {
+  }
+}
+
+.menuContainer {
+  width: 250px;
+  padding: 5px 20px;
+  border-right: 2px solid $soft-bg;
+
+  @include lg {
+    width: max-content;
+  }
+}
+
+.contentContainer {
+  width: 100%;
+  padding: 5px 20px;
+}
